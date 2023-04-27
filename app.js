@@ -10,6 +10,7 @@ require('./db')
 const express = require('express')
 
 const app = express()
+require("./config/session.config")(app)
 
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 require('./config')(app)
@@ -25,7 +26,8 @@ const indexRoutes = require('./routes/index.routes')
 app.use('/', indexRoutes)
 
 const authRoutes = require('./routes/auth.routes')
-app.use('/auth', authRoutes)
+const { isLoggedOut } = require('./middleware/route-guard')
+app.use('/auth', isLoggedOut, authRoutes)
 
 
 

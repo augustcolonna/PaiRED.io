@@ -3,6 +3,7 @@ const router = express.Router();
 const UserModel = require('../models/User.model')
 const bcryptjs = require('bcryptjs');
 const { route } = require('./index.routes');
+
 const saltRounds = 13;
 
 const pwdRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$/
@@ -54,6 +55,8 @@ router.get('/login', (req, res) => {
 
 router.post('/login', async (req, res, next) => {
 
+    console.log("Session:", req.session)
+
     try {
         const currentUser = await UserModel.findOne({ username: req.body.username })
         console.log("Current User: ", currentUser)
@@ -62,7 +65,8 @@ router.post('/login', async (req, res, next) => {
             console.log("Current User found")
 
             if(bcryptjs.compareSync(req.body.password, currentUser.passwordHash)) {
-                res.redirect("/profile")
+                req.session.currentUser = { username: currentUser.username }
+                res.redirect("profile")
             } else {
                 // wrong password 
                 res.render('auth/login', { errorMessage: "Wrong password, try again you idiot!"})
@@ -78,6 +82,7 @@ router.post('/login', async (req, res, next) => {
 })
 
 
+  
 
 
 
