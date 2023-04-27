@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router();
 const UserModel = require('../models/User.model')
 const bcryptjs = require('bcryptjs');
+const { route } = require('./index.routes');
 const saltRounds = 13;
 
 const pwdRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$/
@@ -26,6 +27,7 @@ router.post('/signup', async (req,res) => {
             const passwordHash = bcryptjs.hashSync(req.body.password, salt)
 
             await UserModel.create({ username: req.body.username, email: req.body.email, passwordHash })
+
             res.redirect('/auth/login')
         }
         else{
@@ -46,7 +48,34 @@ router.get('/login', (req, res) => {
     res.render('auth/login');
 })
 
-//
+
+
+// create post route for login 
+
+router.post('/login', async (req, res, next) => {
+
+    try {
+        const currentUser = await UserModel.findOne({ username: req.body.username })
+        console.log("Current User: ", currentUser)
+
+        if(currentUser) {
+            console.log("Current User found")
+
+            if(bcryptjs.compareSync(req.body.password, currentUser.passwordHash)) {
+                res.redirect("/profile")
+            } else {
+                // wrong password 
+                res.render('auth/login', { errorMessage: "Wrong password, try again you idiot!"})
+            }
+        } else {
+            res.render('auth/login', { errorMessage: "Wrong username, try again you idiot!"})
+        }
+
+        
+    } catch (error) {
+        console.log(error)
+    }
+})
 
 
 

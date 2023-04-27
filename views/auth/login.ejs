@@ -8,3 +8,7 @@
     </label>
     <button type="submit">Login</button>
 </form>
+
+<% if (typeof errorMessage !== 'undefined') { %>
+    <p style="color: red"><%= errorMessage %></p>
+    <% } %>

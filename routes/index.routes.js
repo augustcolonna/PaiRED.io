@@ -7,6 +7,17 @@ router.get("/", (req, res, next) => {
 });
 
 
+
+
+//display profile from login - GET
+router.get('/profile', (req, res) => {
+  res.render('profile');
+})
+
+
+
+
+
 // this is clemens route
 
 module.exports = router;
