@@ -66,16 +66,14 @@ router.post('/login', async (req, res, next) => {
 
             if(bcryptjs.compareSync(req.body.password, currentUser.passwordHash)) {
                 req.session.currentUser = { username: currentUser.username }
-                res.redirect("profile")
+                res.redirect("/profile")
             } else {
                 // wrong password 
                 res.render('auth/login', { errorMessage: "Wrong password, try again you idiot!"})
             }
-        } else {
+        }else {
             res.render('auth/login', { errorMessage: "Wrong username, try again you idiot!"})
         }
-
-        
     } catch (error) {
         console.log(error)
     }

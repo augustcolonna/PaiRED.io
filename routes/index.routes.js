@@ -11,8 +11,7 @@ router.get("/", (req, res, next) => {
 //display profile from login - GET
 router.get('/profile', isLoggedIn ,(req, res, next) => {
   console.log("This is our current session:",req.session)
-  res.render('profile', { currentUser: req.session.currentUser })
+  res.render('profile', { currentUser: req.session.user })
 })
-
 
 module.exports = router;
