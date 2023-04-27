@@ -16,6 +16,7 @@
     "mongoos": "^0.0.1-security",
     "mongoose": "^7.0.5",
     "morgan": "^1.10.0",
+    "package.json": "^2.0.1",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
