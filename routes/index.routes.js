@@ -6,4 +6,7 @@ router.get("/", (req, res, next) => {
   res.render("index");
 });
 
+
+// this is clemens route
+
 module.exports = router;
