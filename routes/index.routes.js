@@ -24,22 +24,25 @@ router.get('/profile', isLoggedIn ,async (req, res, next) => {
 
 router.get('/profile/library-creation', isLoggedIn ,async (req, res, next) => {
   // console.log("This is our current session:",req.session)
-
   res.render('library-creation')
 })
 
 
-router.get('/profile/:language', (req, res) => {
-  const { language } = req.params
+router.get('/:id', async (req, res) => {
+
+
+  const libraryLanguage = await LibraryModel.findById(req.params.id)
+
+  console.log(libraryLanguage)
+
+  res.render('library', {language: libraryLanguage})  
 })
 
 
-
-
 router.post('/profile/library-creation', isLoggedIn, async (req, res) => {
-  await LibraryModel.create({libname: req.body.libname, user: req.session.user.id})
+  const newLibrary = await LibraryModel.create({libname: req.body.libname, user: req.session.user.id})
 
-  res.redirect(`/${req.body.libname}`)
+  res.redirect(`/${newLibrary._id}`)
 
 })
 
