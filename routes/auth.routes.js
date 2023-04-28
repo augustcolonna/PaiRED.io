@@ -42,8 +42,6 @@ router.post('/signup', async (req,res) => {
     }
 })
 
-
-
 //display login from - GET
 router.get('/login', (req, res) => {
     res.render('auth/login');
@@ -65,7 +63,7 @@ router.post('/login', async (req, res, next) => {
             console.log("Current User found")
 
             if(bcryptjs.compareSync(req.body.password, currentUser.passwordHash)) {
-                req.session.user = { username: currentUser.username }
+                req.session.user = { username: currentUser.username, id: currentUser._id }
                 res.redirect("/profile")
             } else {
                 // wrong password 
