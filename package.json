@@ -20,6 +20,7 @@
     "mongoos": "^0.0.1-security",
     "mongoose": "^7.0.5",
     "morgan": "^1.10.0",
+    "openai": "^3.2.1",
     "package.json": "^2.0.1",
     "serve-favicon": "^2.5.0"
   },
