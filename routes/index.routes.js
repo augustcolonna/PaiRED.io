@@ -13,9 +13,7 @@ router.get("/", (req, res, next) => {
 
 //display profile from login - GET
 router.get('/profile', isLoggedIn ,async (req, res, next) => {
-  console.log("This is our current session:",req.session)
 
-  const userId = req.session.user.id
 
   //const userLibrary = LibraryModel.findOne( {user: userId} )
   //console.log(userLibrary)
@@ -24,18 +22,27 @@ router.get('/profile', isLoggedIn ,async (req, res, next) => {
   
 })
 
-router.get('/profile/library', isLoggedIn ,async (req, res, next) => {
-  console.log("This is our current session:",req.session)
+router.get('/profile/library-creation', isLoggedIn ,async (req, res, next) => {
+  // console.log("This is our current session:",req.session)
 
-  res.render('library')
+  res.render('library-creation')
 })
 
-router.post('/profile/library', isLoggedIn, async (req, res) => {
-  try {
-    
-  } catch (error) {
-    
-  }
+
+router.get('/profile/:language', (req, res) => {
+  const { language } = req.params
 })
+
+
+
+
+router.post('/profile/library-creation', isLoggedIn, async (req, res) => {
+  await LibraryModel.create({libname: req.body.libname, user: req.session.user.id})
+
+  res.redirect(`/${req.body.libname}`)
+
+})
+
+
 
 module.exports = router;

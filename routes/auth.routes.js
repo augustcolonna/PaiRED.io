@@ -53,11 +53,11 @@ router.get('/login', (req, res) => {
 
 router.post('/login', async (req, res, next) => {
 
-    console.log("Session:", req.session)
+    // console.log("Session:", req.session)
 
     try {
         const currentUser = await UserModel.findOne({ username: req.body.username })
-        console.log("Current User: ", currentUser)
+        //console.log("Current User: ", currentUser)
 
         if(currentUser) {
             console.log("Current User found")
