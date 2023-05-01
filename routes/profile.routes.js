@@ -66,8 +66,19 @@ router.post("/:id/:promptId/delete", isLoggedIn, async (req, res) => {
     res.redirect(`/profile/${req.params.id}`)
 })
 
-  module.exports = router;
+
 
   //Post route for updating
+router.post('/:id/:promptId/update', isLoggedIn, async(req, res) => {
+    const promptId = req.params.promptId
 
+    const { prompt } = req.body
+
+    await PromptModel.findByIdAndUpdate(promptId, { prompt }, { new: true})
+
+    res.redirect(`/profile/${req.params.id}`)
+})
   
+
+
+module.exports = router;
