@@ -33,13 +33,10 @@ router.get('/:id', isLoggedIn, async (req, res) => {
 
     const libraryLanguage = await LibraryModel.findById(req.params.id)
 
+    const oldPrompts = await PromptModel.find({libraryid: req.params.id })
 
 
-
-
-
-
-    res.render('library', {language: libraryLanguage, id: req.params.id})  
+    res.render('library', {language: libraryLanguage, id: req.params.id, prompts: oldPrompts})  
 })
 
 
@@ -48,22 +45,29 @@ router.post('/:id',isLoggedIn, async (req, res) => {
     const libraryId = req.params.id
     const library = await LibraryModel.findById(libraryId)
     const libraryLanguage = library.libname
-
     const newPrompt = req.body.prompt
-
     const finalPrompt = `Please return the syntax for ${newPrompt} in ${libraryLanguage}. Please only return the syntax and no extra explainations.`
-
     const apiResponse = await start(finalPrompt)
-
     const data = {prompt: finalPrompt, response: apiResponse, libraryid: libraryId}
 
     await PromptModel.create(data)
 
     console.log(apiResponse)
-    res.send({finalPrompt, apiResponse})
+    res.redirect(`${libraryId}`)
 })
 
+//Post route for delet the prompt
 
+router.post("/:id/:promptId/delete", isLoggedIn, async (req, res) => {
+    const promptId  = req.params.promptId
 
+    await PromptModel.findByIdAndDelete(promptId)
+
+    res.redirect(`/profile/${req.params.id}`)
+})
 
   module.exports = router;
+
+  //Post route for updating
+
+  
