@@ -1,2 +1,8 @@
 <h1>Hello <%- currentUser.username %></h1>
     <a href="/profile/library-creation">Create New Library</a>
+    <% currentLibraries.forEach(Library => { %>
+        <div>
+            <a href="/profile/<%- Library._id %>"><%- Library.libname %></a>
+        </div>
+     
+    <% }) %>
