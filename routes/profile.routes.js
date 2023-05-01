@@ -10,7 +10,6 @@ const { start } = require('../api-call');
 
 //display profile from login - GET
 router.get('/', isLoggedIn ,async (req, res, next) => {
-
     const currentUserId = req.session.user.id
     const currentUserLibraries = await LibraryModel.find({user: currentUserId})
 
@@ -21,27 +20,20 @@ router.get('/library-creation', isLoggedIn ,async (req, res, next) => {
     res.render('library-creation')
 })
 
-
-
 router.post('/library-creation', isLoggedIn, async (req, res) => {
     const newLibrary = await LibraryModel.create({libname: req.body.libname, user: req.session.user.id})
+
     res.redirect(`${newLibrary._id}`)
 })
 
-  
 router.get('/:id', isLoggedIn, async (req, res) => {
-
     const libraryLanguage = await LibraryModel.findById(req.params.id)
-
     const oldPrompts = await PromptModel.find({libraryid: req.params.id })
-
 
     res.render('library', {language: libraryLanguage, id: req.params.id, prompts: oldPrompts})  
 })
 
-
 router.post('/:id',isLoggedIn, async (req, res) => {
-
     const libraryId = req.params.id
     const library = await LibraryModel.findById(libraryId)
     const libraryLanguage = library.libname
@@ -57,7 +49,6 @@ router.post('/:id',isLoggedIn, async (req, res) => {
 })
 
 //Post route for delet the prompt
-
 router.post("/:id/:promptId/delete", isLoggedIn, async (req, res) => {
     const promptId  = req.params.promptId
 
@@ -66,12 +57,9 @@ router.post("/:id/:promptId/delete", isLoggedIn, async (req, res) => {
     res.redirect(`/profile/${req.params.id}`)
 })
 
-
-
-  //Post route for updating
+//Post route for updating
 router.post('/:id/:promptId/update', isLoggedIn, async(req, res) => {
     const promptId = req.params.promptId
-
     const { prompt } = req.body
 
     await PromptModel.findByIdAndUpdate(promptId, { prompt }, { new: true})
@@ -79,6 +67,4 @@ router.post('/:id/:promptId/update', isLoggedIn, async(req, res) => {
     res.redirect(`/profile/${req.params.id}`)
 })
   
-
-
 module.exports = router;

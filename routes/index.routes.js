@@ -1,5 +1,5 @@
 const express = require('express');
-const { isLoggedIn } = require('../middleware/route-guard');
+const { isLoggedIn, isLoggedOut } = require('../middleware/route-guard');
 const UserModel = require('../models/User.model');
 const router = express.Router();
 const LibraryModel = require('../models/Library.model');
@@ -12,3 +12,9 @@ router.get("/", (req, res, next) => {
 });
 
 module.exports = router;
+
+
+//GET Logout route
+router.get('/logout', isLoggedOut, (req, res) => {
+  res.render('login')
+})
