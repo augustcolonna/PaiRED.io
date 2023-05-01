@@ -63,7 +63,7 @@ router.post('/login', async (req, res, next) => {
             console.log("Current User found")
 
             if(bcryptjs.compareSync(req.body.password, currentUser.passwordHash)) {
-                req.session.user = { username: currentUser.username, id: currentUser._id }
+                req.session.user = { username: currentUser.username, id: currentUser._id, createdAt: currentUser.createdAt }
                 res.redirect("/profile")
             } else {
                 // wrong password 

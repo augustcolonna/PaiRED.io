@@ -12,7 +12,7 @@ const { start } = require('../api-call');
 router.get('/', isLoggedIn ,async (req, res, next) => {
     const currentUserId = req.session.user.id
     const currentUserLibraries = await LibraryModel.find({user: currentUserId})
-
+    console.log(req.session.user, '------------------------------------------------')
     res.render('profile', { currentUser: req.session.user, currentLibraries: currentUserLibraries })
 })
 

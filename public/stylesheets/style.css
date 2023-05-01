@@ -1,12 +1,31 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #3560AC;
 }
 
 a {
-  color: #00b7ff;
+  color: white;
+  text-decoration: none;
 }
 
 h1 {
   color: 15px;
 }
+
+.nav-bar ul {
+  list-style: none;
+
+}
+
+.nav-bar { 
+  background-color: #2d2357;
+}
+
+
+/* Profile View styling */
+
+
+
+
+
+/* layout styling */
