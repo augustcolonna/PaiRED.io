@@ -3,7 +3,6 @@
 body {
   font-family: 'Work Sans', sans-serif;
   background-color: #3560ac;
-  background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
   color: white;
 }
 
@@ -26,7 +25,6 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 background-color: #2d2357;
-background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
 height: 60px;
 
 }
@@ -59,3 +57,152 @@ select, input {
 
 
 /* layout styling */
+#profile-top {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  padding: 30px;
+  gap: 40px;
+
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.btn-class {
+  width: 100%;
+}
+
+.library-list {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
+}
+
+.library-container {
+  height: 250px;
+  width: 250px;
+  background-color:#2d2357;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.library-creation {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+
+.library-creation > form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  background-color: #2d2357;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+
+.library-creation > form > button {
+  width: 100%;
+}
+
+.library-creation > h1 {
+  width: 40%;
+  text-align: center;
+}
+
+.library-creation > form > label {
+  background-color: #2d2357;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+
+}
+
+.library-prompts {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: flex-end;
+  gap:20px;
+}
+
+
+.library-top {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 40px;
+}
+
+
+
+.singleSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+}
+
+pre {
+  background-color: #000000;
+  margin: 0% !important;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.titlePrompt {
+  background-color: #343541 !important;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 5px;
+  padding-bottom: 10px;
+  border-radius: 15px 15px 0px 0px;
+}
+.titlePrompt > h5 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 5px;
+}
+
+
+.singleSection {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
