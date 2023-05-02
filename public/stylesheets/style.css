@@ -1,10 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
 
+
+/*
+color scheme:
+night: #121714
+Russian violet: #2D2357
+Denim: #3560AC
+Vivid blue sky: #24D2F9
+Sunglow: #FDC835
+*/
+
 body {
   font-family: 'Work Sans', sans-serif;
   background-color: #3560ac;
   background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
   color: white;
+  margin: auto 0;
+  height: 100vh;
+  width: 100vw;
 }
 
 a {
@@ -16,32 +29,62 @@ h1 {
   color: 15px;
 }
 
+.app-logo{
+  margin-left: 20px;
+  font-size: 2rem; 
+}
+
+.app-logo span {
+  color: #FDC835;
+}
+
 .nav-bar ul {
   list-style: none;
   margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  font-size: 1.2rem;
+}
+
+.nav-bar li a:hover {
+  color: #FDc835;
+  text-transform: uppercase;
+  transition: transform .8s;
+  font-size: 1.3rem;
+  text-shadow: #FDC835 0 0 5px
+
 }
 
 .nav-bar { 
 display: flex;
+flex-direction: row;
 justify-content: space-between;
 align-items: center;
-background-color: #2d2357;
+background-color: #2d2357BF;
 background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
 height: 60px;
-
 }
 
 /*button styling*/
 button {
-  padding: 20px;
+  padding: 5px;
   border: none;
-  background-color: #24d2F9;
+  background-color: white;
   border-radius: 5px;
-  color: white;
-  font-weight: 800;
-  width: 20%;
+  color: #121714;
+  font-weight: 500;
   font-size: 1rem;
   transition: transform .3s;
+  cursor: pointer;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #2d2357;
+  color: white;
+  text-shadow: #3560AC 0 0 5px;
+  transform: scale(1.1);
 }
 
 /*input field*/
@@ -51,11 +94,123 @@ select, input {
   background-color: #2d2357;
   border-radius: 5px;
   color: white;
+}
+
+/* home (index) page */
+
+.app-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: #3560AC solid 1px;
+  border-radius: 10px;
+  margin: 60px 60px;
+  height: 500px;
+  background: linear-gradient(#3560ac80, #12171480);
+  text-align: center;
+  
+}
+
+.app-name h1{
+  font-size: 5rem;
+  text-shadow: #FDC835 0 0 5px;
+}
+
+.app-name p {
+  font-size: 2rem;
+  text-shadow: #FDC835 0 0 5px;
+  line-height: 2.5rem;
+}
+
+#team-members {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 
 }
 
+#team-members h2{
+  font-size: 2rem;
+  text-shadow: #FDC835 0 0 5px;
+  line-height: 2.5rem;
+}
+
+
+/* sign up page */
+.sign-up-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: #3560AC solid 1px;
+  border-radius: 10px;
+  margin: 60px 60px;
+  height: 700px;
+  background: linear-gradient(#3560ac80, #12171480);
+  text-align: center;
+}
+
+.sign-up-container h1 {
+  font-size: 3rem;
+  text-shadow: #FDC835 0 0 5px;
+}
+
+.sign-up-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.signup-form label {
+  color: #FDC835;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.7rem;
+  text-shadow: #FDC835 0 0 3px;
+}
+
+.sign-up-container input {
+  width: 90%;
+  height: 20px;
+}
+
+.sign-up-container p {
+  font-size: 1.2rem;
+}
+
+.sign-up-container span {
+  color:#FDC835;
+  text-shadow: #FDC835 0 0 3px;
+}
+
+.signup-btn {
+  padding: 15px;
+  border: none;
+  background-color: #FFFFFFDE;
+  border-radius: 5px;
+  color: #121714;
+  font-weight: 800;
+  font-size: 1.2rem;
+  transition: transform .5s;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.signup-btn:hover {
+  cursor: pointer;
+  background-color: #2d2357;
+  color: white;
+  text-shadow: #3560AC 0 0 5px;
+  transform: scale(1.1);
+}
+
+
+/* login page */
 
 
 
 
-/* layout styling */
+
+
