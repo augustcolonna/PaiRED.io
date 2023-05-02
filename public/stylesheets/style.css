@@ -1,6 +1,7 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #3560AC;
+  background-color: #3560ac;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png")
 }
 
 a {
@@ -14,11 +15,17 @@ h1 {
 
 .nav-bar ul {
   list-style: none;
-
+  margin-right: 20px;
 }
 
 .nav-bar { 
-  background-color: #2d2357;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+background-color: #fc8506;
+background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+height: 60px;
+
 }
 
 

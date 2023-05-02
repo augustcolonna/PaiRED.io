@@ -19,11 +19,16 @@ router.get('/', isLoggedIn ,async (req, res, next) => {
 router.get('/library-creation', isLoggedIn ,async (req, res, next) => {
     res.render('library-creation')
 })
-
+//post for library creation
 router.post('/library-creation', isLoggedIn, async (req, res) => {
-    const newLibrary = await LibraryModel.create({libname: req.body.libname, user: req.session.user.id})
+    try {
+        const newLibrary = await LibraryModel.create({libname: req.body.libname, user: req.session.user.id})
 
-    res.redirect(`${newLibrary._id}`)
+        res.redirect(`${newLibrary._id}`)    
+    } catch (error) {
+        res.redirect('/profile')
+        console.log(error)
+    }
 })
 
 router.get('/:id', isLoggedIn, async (req, res) => {
@@ -45,6 +50,7 @@ router.post('/:id',isLoggedIn, async (req, res) => {
     await PromptModel.create(data)
 
     console.log(apiResponse)
+    
     res.redirect(`${libraryId}`)
 })
 

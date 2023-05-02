@@ -6,7 +6,6 @@ const librarySchema = new Schema(
     libname: {
       type: String,
       required: true,
-      unique: true,
     },
     user: {
         type: mongoose.Schema.Types.ObjectId, 

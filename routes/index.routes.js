@@ -1,20 +1,18 @@
 const express = require('express');
-const { isLoggedIn, isLoggedOut } = require('../middleware/route-guard');
-const UserModel = require('../models/User.model');
+const { isLoggedIn } = require('../middleware/route-guard');
 const router = express.Router();
-const LibraryModel = require('../models/Library.model');
-const PromptModel = require('../models/Prompt.model');
-const { start } = require('../api-call');
 
 /* GET home page */
 router.get("/", (req, res, next) => {
   res.render("index");
 });
 
-module.exports = router;
-
-
 //GET Logout route
-router.get('/logout', isLoggedOut, (req, res) => {
-  res.render('login')
+router.get('/logout', isLoggedIn, (req, res) => {
+
+  req.session.destroy()
+
+  res.render('logout')
 })
+
+module.exports = router;
