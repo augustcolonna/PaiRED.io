@@ -167,6 +167,19 @@ img {
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 40px;
+  background-color: #24d2f9;
+  padding-bottom: 10px;
+}
+
+.library-top > h1 {
+  width: 90%;
+}
+
+.library-top > form > button {
+  background-color: #2d2357 !important;
+  height: 50px;
+  width: 50%;
+  text-align: center;
 }
 
 
@@ -175,10 +188,15 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
   width: 100%;
+  gap: 100px;
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  
 }
 
 pre {
@@ -202,7 +220,28 @@ pre {
 }
 
 
-.singleSection {
-  margin-top: 15px;
-  margin-bottom: 15px;
+
+
+
+.all-prompts {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+
+
+.codePart {
+  width: 80%;
+}
+
+.updatePart {
+  width: 100%
+}
+
+.updatePart > label > button {
+  height: 10px !important
 }
