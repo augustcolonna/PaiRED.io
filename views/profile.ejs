@@ -1,15 +1,20 @@
 <div class="profile-section">
-    <div class="profile-heading">
-        <h1>Hello <%- currentUser.username %></h1>
-        <p>Currently learning these languages: <% currentLibraries.forEach(Library => { %>
-                 <%- Library.libname %>
-                 <% }) %> %></p>
-        <p>Learning since: <%- currentUser.createdAt %></p>
+
+    <div id="profile-top">
+        <div class="profile-img">
+            <img src="https://i.pinimg.com/originals/3f/94/70/3f9470b34a8e3f526dbdb022f9f19cf7.jpg" alt="profile">
+        </div>
+        <div class="profile-heading">
+            <h1>Hello <%- currentUser.username %></h1>
+            <p>Currently learning these languages: <% currentLibraries.forEach(Library => { %>
+                    <%- Library.libname %>
+                    <% }) %> %></p>
+            <p>Learning since: <%- currentUser.createdAt %></p>
+            <button class="btn-class"><a href="/profile/library-creation">Create New Library</a></button>
+        </div>
     </div>
-    
-    <div class="create-lib-btn">
-        <button><a href="/profile/library-creation">Create New Library</a></button>
-    </div>
+
+
     <div class="library-list">
         <% currentLibraries.forEach(Library => { %>
             <div class="library-container">

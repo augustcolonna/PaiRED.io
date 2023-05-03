@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 /*
 color scheme:
 night: #121714
@@ -13,7 +16,6 @@ Sunglow: #FDC835
 body {
   font-family: 'Work Sans', sans-serif;
   background-color: #3560ac;
-  background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
   color: white;
   margin: auto 0;
   height: 100vh;
@@ -128,8 +130,332 @@ select, input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* home (index) page */
+
+.app-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: #3560AC solid 1px;
+  border-radius: 10px;
+  margin: 30px 60px 10px 60px;
+  height: 500px;
+  background: linear-gradient(#3560ac80, #12171480);
+  text-align: center;
+  
+}
+
+.app-name h1{
+  font-size: 5rem;
+  text-shadow: #FDC835 0 0 5px;
+}
+
+.app-name p {
+  font-size: 2rem;
+  text-shadow: #FDC835 0 0 5px;
+  line-height: 2.5rem;
+}
+
+#team-members {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   
 
+}
+
+#team-members h2{
+  font-size: 2rem;
+  text-shadow: #FDC835 0 0 5px;
+  line-height: 2.5rem;
+}
+
+.clemens {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.clemens-picture {
+  border-radius: 30px;
+  box-shadow: #FDC835 0 0 15px;
+  width: 200px;
+}
+
+.clemens p{
+  text-align: center;
+  width: 400px;
+}
+
+.gus{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.gus-picture {
+  border-radius: 30px;
+  box-shadow: #FDC835 0 0 15px;
+  width: 200px;
+  
+}
+
+.gus p{ 
+  text-align: center;
+  width: 400px;
+}
+
+/* sign up page */
+.sign-up-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: #3560AC solid 1px;
+  border-radius: 10px;
+  margin: 60px 60px;
+  height: 700px;
+  background: linear-gradient(#3560ac80, #12171480);
+  text-align: center;
+}
+
+.sign-up-container h1 {
+  font-size: 3rem;
+  text-shadow: #FDC835 0 0 5px;
+}
+
+.sign-up-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.signup-form label {
+  color: #FDC835;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.7rem;
+  text-shadow: #FDC835 0 0 3px;
+}
+
+.sign-up-container input {
+  width: 90%;
+  height: 20px;
+}
+
+.sign-up-container p {
+  font-size: 1.2rem;
+}
+
+.sign-up-container span {
+  color:#FDC835;
+  text-shadow: #FDC835 0 0 3px;
+}
+
+.signup-btn {
+  padding: 15px;
+  border: none;
+  background-color: #FFFFFFDE;
+  border-radius: 5px;
+  color: #121714;
+  font-weight: 800;
+  font-size: 1.2rem;
+  transition: transform .5s;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.signup-btn:hover {
+  cursor: pointer;
+  background-color: #2d2357;
+  color: white;
+  text-shadow: #3560AC 0 0 5px;
+  transform: scale(1.1);
+}
+
+
+/* login page */
+
+
+
+
+p
+
+/* layout styling */
+#profile-top {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  padding: 30px;
+  gap: 40px;
+
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.btn-class {
+  width: 100%;
+}
+
+.library-list {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
+}
+
+.library-container {
+  height: 250px;
+  width: 250px;
+  background-color:#2d2357;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.library-creation {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+
+.library-creation > form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  background-color: #2d2357;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+
+.library-creation > form > button {
+  width: 100%;
+}
+
+.library-creation > h1 {
+  width: 40%;
+  text-align: center;
+}
+
+.library-creation > form > label {
+  background-color: #2d2357;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+
+.library-prompts {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: flex-end;
+  gap:20px;
+}
+
+.library-top {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 40px;
+  background-color: #24d2f9;
+  padding-bottom: 10px;
+}
+
+.library-top > h1 {
+  width: 90%;
+}
+
+.library-top > form > button {
+  background-color: #2d2357 !important;
+  height: 50px;
+  width: 50%;
+  text-align: center;
+}
+
+.singleSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 100%;
+  gap: 100px;
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  
+}
+
+pre {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #000000;
+  margin: 0% !important;
+  border-radius: 0px 0px 15px 15px;  
+}
+
+
+pre > p {
+  margin-left: 10px;
+  text-align: start !important;
+  margin-top: 0px;
+}
+
+.titlePrompt {
+  background-color: #343541 !important;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 5px;
+  padding-bottom: 10px;
+  border-radius: 15px 15px 0px 0px;
+}
+.titlePrompt > h5 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 5px;
 }
 
 #team-members h2{
@@ -255,3 +581,28 @@ select, input {
 
 
 
+.all-prompts {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+
+.codePart {
+  width: 80%;
+}
+
+.updatePart {
+  width: 100%
+}
+
+.updatePart > label > button {
+  height: 10px !important
+}
+.singleSection {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
