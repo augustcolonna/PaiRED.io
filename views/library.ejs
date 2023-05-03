@@ -1,7 +1,7 @@
 <div class="library-top">
     <h1>This is your <%- language.libname %> library</h1>
     <form class="library-prompts" action="/profile/<%- id %>" method="POST">
-    <label >Syntax:
+    <label>Syntax:
         <input type="text" name="prompt">
     </label> 
         <button type="submit">Generate Library Entry</button>
@@ -10,7 +10,6 @@
 
 <div class="all-prompts">
     <% prompts.forEach(prompt => { %>
-
     <div class="singleSection">
         <div class="codePart">
             <div class="titlePrompt">
@@ -19,17 +18,14 @@
             <pre>
                 <p><%- prompt.response %></p>
             </pre>
-
         </div>
-
         <div class="updatePart">
             <form class="update" action="/profile/<%- id %>/<%- prompt._id %>/update" method="POST">
-                <label> Update Prompt:
+                <label> Update Title:
                 <input type="text" name="prompt">
                 </label> 
                 <button type="submit">Update </button>
             </form>
-
             <form action="/profile/<%- id %>/<%- prompt._id %>/delete" method="POST">
                 <button>Delete</button>
             </form>

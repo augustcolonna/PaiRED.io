@@ -1,9 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
-
-<<<<<<< HEAD
-
-=======
->>>>>>> master
 /*
 color scheme:
 night: #121714
@@ -20,15 +15,13 @@ body {
   margin: auto 0;
   height: 100vh;
   width: 100vw;
+  background-color: #3560ac;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
 }
 
 a {
   color: white;
   text-decoration: none;
-}
-
-h1 {
-  color: 15px;
 }
 
 .app-logo{
@@ -42,7 +35,7 @@ h1 {
 
 .nav-bar ul {
   list-style: none;
-  margin-right: 20px;
+  margin-right: 80px;
   display: flex;
   flex-direction: row;
   gap: 40px;
@@ -66,28 +59,10 @@ align-items: center;
 background-color: #2d2357BF;
 background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
 height: 60px;
+margin-bottom: 40px;
 }
 
 /*button styling*/
-button {
-  padding: 5px;
-  border: none;
-  background-color: white;
-  border-radius: 5px;
-  color: #121714;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: transform .3s;
-  cursor: pointer;
-}
-
-button:hover {
-  cursor: pointer;
-  background-color: #2d2357;
-  color: white;
-  text-shadow: #3560AC 0 0 5px;
-  transform: scale(1.1);
-}
 
 /*input field*/
 select, input {
@@ -111,7 +86,6 @@ select, input {
   height: 500px;
   background: linear-gradient(#3560ac80, #12171480);
   text-align: center;
-  
 }
 
 .app-name h1{
@@ -130,42 +104,6 @@ select, input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-/* home (index) page */
-
-.app-name {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: #3560AC solid 1px;
-  border-radius: 10px;
-  margin: 30px 60px 10px 60px;
-  height: 500px;
-  background: linear-gradient(#3560ac80, #12171480);
-  text-align: center;
-  
-}
-
-.app-name h1{
-  font-size: 5rem;
-  text-shadow: #FDC835 0 0 5px;
-}
-
-.app-name p {
-  font-size: 2rem;
-  text-shadow: #FDC835 0 0 5px;
-  line-height: 2.5rem;
-}
-
-#team-members {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
-
 }
 
 #team-members h2{
@@ -205,6 +143,7 @@ select, input {
   border-radius: 30px;
   box-shadow: #FDC835 0 0 15px;
   width: 200px;
+  height: 240px;
   
 }
 
@@ -213,8 +152,21 @@ select, input {
   width: 400px;
 }
 
-/* sign up page */
+/* sign up page and login page*/
 .sign-up-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: #3560AC solid 1px;
+  border-radius: 10px;
+  margin: 60px 60px;
+  height: 700px;
+  background: linear-gradient(#3560ac80, #12171480);
+  text-align: center;
+}
+
+.login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -232,7 +184,19 @@ select, input {
   text-shadow: #FDC835 0 0 5px;
 }
 
-.sign-up-container form {
+.login-container h1 {
+  font-size: 3rem;
+  text-shadow: #FDC835 0 0 5px;
+}
+
+.sign-up-container form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.login-container form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -247,7 +211,20 @@ select, input {
   text-shadow: #FDC835 0 0 3px;
 }
 
+.login-form label {
+  color: #FDC835;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.7rem;
+  text-shadow: #FDC835 0 0 3px;
+}
+
 .sign-up-container input {
+  width: 90%;
+  height: 20px;
+}
+
+.login-container input {
   width: 90%;
   height: 20px;
 }
@@ -274,6 +251,19 @@ select, input {
   margin-bottom: 20px;
 }
 
+.login-btn {
+  padding: 15px;
+  border: none;
+  background-color: #FFFFFFDE;
+  border-radius: 5px;
+  color: #121714;
+  font-weight: 800;
+  font-size: 1.2rem;
+  transition: transform .5s;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
 .signup-btn:hover {
   cursor: pointer;
   background-color: #2d2357;
@@ -282,15 +272,15 @@ select, input {
   transform: scale(1.1);
 }
 
+.login-btn:hover {
+  cursor: pointer;
+  background-color: #2d2357;
+  color: white;
+  text-shadow: #3560AC 0 0 5px;
+  transform: scale(1.1);
+}
 
-/* login page */
-
-
-
-
-p
-
-/* layout styling */
+/* Profile and library styling */
 #profile-top {
   display: flex;
   flex-direction: row;
@@ -300,7 +290,6 @@ p
   align-content: center;
   padding: 30px;
   gap: 40px;
-
 }
 
 img {
@@ -309,8 +298,32 @@ img {
   border-radius: 20px;
 }
 
-.btn-class {
-  width: 100%;
+.profile-btn {
+  padding: 15px;
+  border: none;
+  background-color: #FFFFFFDE;
+  border-radius: 5px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  transition: transform .5s;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.profile-btn a {
+  color: #121714;
+}
+
+.profile-btn:hover {
+  cursor: pointer;
+  background-color: #2d2357;
+  color: white;
+  text-shadow: #FDC835 0 0 5px;
+  transform: scale(1.1);
+}
+
+.profile-btn:hover a {
+  color: white; 
 }
 
 .library-list {
@@ -323,10 +336,23 @@ img {
   align-content: stretch;
 }
 
+.library-list a {
+  font-size: 1.5rem;
+}
+
+.library-container:hover{
+  cursor: pointer;
+  background-color: #2d2357;
+  color: white;
+  text-shadow: #FDC835 0 0 5px;
+  transform: scale(1.1);
+  border-radius: 20px;
+  transition: transform .5s; ;
+}
+
 .library-container {
   height: 250px;
   width: 250px;
-  background-color:#2d2357;
   border-radius: 20px;
   display: flex;
   flex-direction: row;
@@ -334,6 +360,8 @@ img {
   justify-content: center;
   align-items: center;
   align-content: center;
+  background-color: #2d2357;
+  background-image: url("https://www.transparenttextures.com/patterns/rocky-wall.png");
 }
 
 .library-creation {
@@ -342,33 +370,53 @@ img {
   flex-wrap: nowrap;
   justify-content: space-evenly;
   align-items: center;
-  align-content: center;
 }
 
-.library-creation > form {
+.library-select {
+  width: 75%;
+}
+
+.library-select form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
-  background-color: #2d2357;
-  padding: 30px;
+  background: linear-gradient(#3560ac80, #12171480);  padding: 30px;
   border-radius: 15px;
+  gap: 20px;
 }
 
-
-.library-creation > form > button {
+.library-select button {
   width: 100%;
+  padding: 15px;
+  border: none;
+  background-color: #FFFFFFDE;
+  border-radius: 5px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  transition: transform .5s;
+  cursor: pointer;
+  margin-bottom: 20px;
+  width: 20%;
+}
+.library-select button:hover{
+  cursor: pointer;
+  background-color: #2d2357;
+  color: white;
+  text-shadow: #FDC835 0 0 5px;
+  transform: scale(1.1);
 }
 
 .library-creation > h1 {
   width: 40%;
   text-align: center;
+  text-shadow: #FDC835 0 0 5px;
+  font-size: 2.5rem;
 }
 
-.library-creation > form > label {
-  background-color: #2d2357;
+.library-select > form > label {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -376,6 +424,50 @@ img {
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
+  gap: 20px;
+  font-size: 1.5rem;
+  text-shadow: #FDC835 0 0 5px;
+}
+
+.library-select select {
+  font-size: 1.3rem;
+}
+
+.library-top {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #12171480;
+  
+}
+
+.library-top h1 {
+  width: 70%;
+}
+
+.library-top button {
+  padding: 15px;
+  border: none;
+  background-color: #FFFFFFDE;
+  border-radius: 5px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  transition: transform .5s;
+  cursor: pointer;
+  width: 50%;
+  
+}
+
+.library-top button:hover{
+  cursor: pointer;
+  background-color: #2d2357;
+  color: white;
+  text-shadow: #FDC835 0 0 5px;
+  transform: scale(1.1);
 }
 
 .library-prompts {
@@ -386,32 +478,18 @@ img {
   justify-content: flex-end;
   align-items: center;
   align-content: flex-end;
-  gap:20px;
+  gap: 20px;
 }
 
-.library-top {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 40px;
-  background-color: #24d2f9;
-  padding-bottom: 10px;
-}
-
-.library-top > h1 {
-  width: 90%;
-}
-
-.library-top > form > button {
-  background-color: #2d2357 !important;
-  height: 50px;
+.library-prompts label {
+  font-size: 1.4rem;
   width: 50%;
-  text-align: center;
+  text-shadow: #FDC835 0 0 5px;
+}
+
+.library-prompts input {
+  width: 50%;
+  background-color: white;
 }
 
 .singleSection {
@@ -419,14 +497,12 @@ img {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
-  width: 100%;
+  align-items: center;
+  width: 95%;
   gap: 100px;
   padding: 15px;
   margin-top: 15px;
   margin-bottom: 15px;
-  
 }
 
 pre {
@@ -436,7 +512,6 @@ pre {
   margin: 0% !important;
   border-radius: 0px 0px 15px 15px;  
 }
-
 
 pre > p {
   margin-left: 10px;
@@ -451,135 +526,14 @@ pre > p {
   padding: 5px;
   padding-bottom: 10px;
   border-radius: 15px 15px 0px 0px;
+  text-transform: capitalize;
+  font-size: 1.3rem;
 }
 .titlePrompt > h5 {
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 5px;
 }
-
-#team-members h2{
-  font-size: 2rem;
-  text-shadow: #FDC835 0 0 5px;
-  line-height: 2.5rem;
-}
-
-.clemens {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.clemens-picture {
-  border-radius: 30px;
-  box-shadow: #FDC835 0 0 15px;
-  width: 200px;
-}
-
-.clemens p{
-  text-align: center;
-  width: 400px;
-}
-
-.gus{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.gus-picture {
-  border-radius: 30px;
-  box-shadow: #FDC835 0 0 15px;
-  width: 200px;
-  
-}
-
-.gus p{ 
-  text-align: center;
-  width: 400px;
-}
-
-
-/* sign up page */
-.sign-up-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: #3560AC solid 1px;
-  border-radius: 10px;
-  margin: 60px 60px;
-  height: 700px;
-  background: linear-gradient(#3560ac80, #12171480);
-  text-align: center;
-}
-
-.sign-up-container h1 {
-  font-size: 3rem;
-  text-shadow: #FDC835 0 0 5px;
-}
-
-.sign-up-container form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 40px;
-}
-
-.signup-form label {
-  color: #FDC835;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.7rem;
-  text-shadow: #FDC835 0 0 3px;
-}
-
-.sign-up-container input {
-  width: 90%;
-  height: 20px;
-}
-
-.sign-up-container p {
-  font-size: 1.2rem;
-}
-
-.sign-up-container span {
-  color:#FDC835;
-  text-shadow: #FDC835 0 0 3px;
-}
-
-.signup-btn {
-  padding: 15px;
-  border: none;
-  background-color: #FFFFFFDE;
-  border-radius: 5px;
-  color: #121714;
-  font-weight: 800;
-  font-size: 1.2rem;
-  transition: transform .5s;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-
-.signup-btn:hover {
-  cursor: pointer;
-  background-color: #2d2357;
-  color: white;
-  text-shadow: #3560AC 0 0 5px;
-  transform: scale(1.1);
-}
-
-
-/* login page */
-
-
-
-
-
 
 .all-prompts {
   display: flex;
@@ -590,19 +544,56 @@ pre > p {
   align-content: flex-start;
 }
 
-
 .codePart {
   width: 80%;
 }
 
 .updatePart {
-  width: 100%
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
 }
 
-.updatePart > label > button {
-  height: 10px !important
+.updatePart form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
-.singleSection {
-  margin-top: 15px;
-  margin-bottom: 15px;
+
+.update label {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-shadow: #FDC835 0 0 5px;
+  
+}
+
+.update input {
+  background-color: white;
+  width: 90%;
+  
+}
+
+.updatePart button {
+  padding: 15px;
+  border: none;
+  background-color: #FFFFFFDE;
+  border-radius: 5px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  transition: transform .5s;
+  cursor: pointer;
+  width: 70%;
+}
+
+.updatePart button:hover{
+  cursor: pointer;
+  background-color: #2d2357;
+  color: white;
+  text-shadow: #FDC835 0 0 5px;
+  transform: scale(1.1);
 }

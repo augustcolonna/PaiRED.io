@@ -43,9 +43,9 @@ router.post('/:id',isLoggedIn, async (req, res) => {
     const library = await LibraryModel.findById(libraryId)
     const libraryLanguage = library.libname
     const newPrompt = req.body.prompt
-    const finalPrompt = `Please return the syntax for ${newPrompt} in ${libraryLanguage}. Please only return the syntax and no extra explainations.`
+    const finalPrompt = `Please return the syntax for ${newPrompt} in ${libraryLanguage}. Please only return the syntax and no extra explainations`
     const apiResponse = await start(finalPrompt)
-    const data = {prompt: finalPrompt, response: apiResponse, libraryid: libraryId}
+    const data = {prompt: newPrompt, response: apiResponse, libraryid: libraryId}
 
     await PromptModel.create(data)
 

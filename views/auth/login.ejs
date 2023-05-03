@@ -1,14 +1,16 @@
-<h1>Login</h1>
-<form action="/auth/login" method="POST">
-    <label>Username:
-        <input placeholder="enter username" name="username" required>
-    </label>
-    <label>Password:
-        <input placeholder="enter password" name="password" type="password">
-    </label>
-    <button type="submit">Login</button>
-</form>
-
-<% if (typeof errorMessage !== 'undefined') { %>
-    <p style="color: red"><%= errorMessage %></p>
-    <% } %>
+<div class="login-container">
+    <h1>Login</h1>
+    <form action="/auth/login" method="POST" class="login-form">
+        <label>Username:
+            <input placeholder="enter username" name="username" required>
+        </label>
+        <label>Password:
+            <input placeholder="enter password" name="password" type="password">
+        </label>
+        <button class="login-btn" type="submit">Login</button>
+    </form>
+    
+    <% if (typeof errorMessage !== 'undefined') { %>
+        <p style="color: #FDC835""><%= errorMessage %></p>
+        <% } %>
+</div>

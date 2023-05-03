@@ -1,5 +1,4 @@
 <div class="profile-section">
-
     <div id="profile-top">
         <div class="profile-img">
             <img src="https://i.pinimg.com/originals/3f/94/70/3f9470b34a8e3f526dbdb022f9f19cf7.jpg" alt="profile">
@@ -10,16 +9,16 @@
                     <%- Library.libname %>
                     <% }) %> %></p>
             <p>Learning since: <%- currentUser.createdAt %></p>
-            <button class="btn-class"><a href="/profile/library-creation">Create New Library</a></button>
+            <button class="profile-btn"><a href="/profile/library-creation">Create New Library</a></button>
         </div>
     </div>
-
-
     <div class="library-list">
         <% currentLibraries.forEach(Library => { %>
-            <div class="library-container">
-                <a href="/profile/<%- Library._id %>"><%- Library.libname %></a>
-            </div>
-        <% }) %>
+            <a href="/profile/<%- Library._id %>">
+                <div class="library-container">
+                    <%- Library.libname %>
+                </div>
+            </a>
+        <% }) %> 
     </div>
 </div>
