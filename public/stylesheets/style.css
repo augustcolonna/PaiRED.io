@@ -104,7 +104,7 @@ select, input {
   justify-content: center;
   border: #3560AC solid 1px;
   border-radius: 10px;
-  margin: 60px 60px;
+  margin: 30px 60px 10px 60px;
   height: 500px;
   background: linear-gradient(#3560ac80, #12171480);
   text-align: center;
@@ -124,8 +124,10 @@ select, input {
 
 #team-members {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
 
 }
 
@@ -133,6 +135,45 @@ select, input {
   font-size: 2rem;
   text-shadow: #FDC835 0 0 5px;
   line-height: 2.5rem;
+}
+
+.clemens {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.clemens-picture {
+  border-radius: 30px;
+  box-shadow: #FDC835 0 0 15px;
+  width: 200px;
+}
+
+.clemens p{
+  text-align: center;
+  width: 400px;
+}
+
+.gus{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.gus-picture {
+  border-radius: 30px;
+  box-shadow: #FDC835 0 0 15px;
+  width: 200px;
+  
+}
+
+.gus p{ 
+  text-align: center;
+  width: 400px;
 }
 
 
