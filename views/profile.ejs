@@ -9,8 +9,8 @@
                     <%- Library.libname %>
                     <% }) %> %></p>
             <p>Learning since: <%- currentUser.createdAt %></p>
-            <button class="profile-btn"><a href="/profile/library-creation">Create New Library</a></button>
         </div>
+        <button class="profile-btn"><a href="/profile/library-creation">Create New Library</a></button>
     </div>
     <div class="library-list">
         <% currentLibraries.forEach(Library => { %>

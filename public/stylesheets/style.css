@@ -15,8 +15,7 @@ body {
   margin: auto 0;
   height: 100vh;
   width: 100vw;
-  background-color: #3560ac;
-  background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+  background: linear-gradient(40deg,#3560AC,#FDC835);
 }
 
 a {
@@ -40,13 +39,18 @@ a {
   flex-direction: row;
   gap: 40px;
   font-size: 1.2rem;
+  transition-timing-function: ease;
+}
+
+.nav-bar li {
+  color: white;
+
 }
 
 .nav-bar li a:hover {
   color: #FDc835;
   text-transform: uppercase;
-  transition: transform .8s;
-  font-size: 1.3rem;
+  transition-timing-function: ease-in;
   text-shadow: #FDC835 0 0 5px
 
 }
@@ -80,30 +84,28 @@ select, input {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: #3560AC solid 1px;
-  border-radius: 10px;
   margin: 30px 60px 10px 60px;
   height: 500px;
-  background: linear-gradient(#3560ac80, #12171480);
   text-align: center;
 }
 
-.app-name h1{
-  font-size: 5rem;
-  text-shadow: #FDC835 0 0 5px;
-}
 
 .app-name p {
   font-size: 2rem;
   text-shadow: #FDC835 0 0 5px;
   line-height: 2.5rem;
+  margin: 0 auto;
+  background-color: #3435414F;
+  border-radius: 100px;
+  padding: 20px;
 }
 
 #team-members {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: first baseline;
+  gap: 100px;
 }
 
 #team-members h2{
@@ -121,14 +123,15 @@ select, input {
 }
 
 .clemens-picture {
-  border-radius: 30px;
-  box-shadow: #FDC835 0 0 15px;
+  border-radius: 50%;
+  box-shadow: #12171480 0 0 15px;
   width: 200px;
 }
 
 .clemens p{
   text-align: center;
   width: 400px;
+
 }
 
 .gus{
@@ -140,10 +143,10 @@ select, input {
 }
 
 .gus-picture {
-  border-radius: 30px;
-  box-shadow: #FDC835 0 0 15px;
+  border-radius: 60%;
+  box-shadow: #12171480 0 0 15px;
   width: 200px;
-  height: 240px;
+  height: 260px;
   
 }
 
@@ -158,11 +161,10 @@ select, input {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: #3560AC solid 1px;
-  border-radius: 10px;
+  
   margin: 60px 60px;
   height: 700px;
-  background: linear-gradient(#3560ac80, #12171480);
+  
   text-align: center;
 }
 
@@ -171,11 +173,7 @@ select, input {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: #3560AC solid 1px;
-  border-radius: 10px;
-  margin: 60px 60px;
   height: 700px;
-  background: linear-gradient(#3560ac80, #12171480);
   text-align: center;
 }
 
@@ -194,6 +192,9 @@ select, input {
   flex-direction: column;
   justify-content: center;
   gap: 40px;
+  border-radius: 100px;
+  padding: 40px;
+  background: linear-gradient(#3560ac80, #12171480);
 }
 
 .login-container form {
@@ -201,6 +202,9 @@ select, input {
   flex-direction: column;
   justify-content: center;
   gap: 40px;
+  border-radius: 100px;
+  padding: 40px;
+  background: linear-gradient(#3560ac80, #12171480);
 }
 
 .signup-form label {
@@ -222,11 +226,13 @@ select, input {
 .sign-up-container input {
   width: 90%;
   height: 20px;
+  background-color: #34354180;
 }
 
 .login-container input {
   width: 90%;
   height: 20px;
+  background-color: #34354180;
 }
 
 .sign-up-container p {
@@ -242,7 +248,7 @@ select, input {
   padding: 15px;
   border: none;
   background-color: #FFFFFFDE;
-  border-radius: 5px;
+  border-radius: 40px;
   color: #121714;
   font-weight: 800;
   font-size: 1.2rem;
@@ -254,8 +260,8 @@ select, input {
 .login-btn {
   padding: 15px;
   border: none;
-  background-color: #FFFFFFDE;
-  border-radius: 5px;
+  background-color: #FFFFFFB3;
+  border-radius: 40px;
   color: #121714;
   font-weight: 800;
   font-size: 1.2rem;
@@ -266,28 +272,29 @@ select, input {
 
 .signup-btn:hover {
   cursor: pointer;
-  background-color: #2d2357;
+  background-color: #2d235780;
   color: white;
   text-shadow: #3560AC 0 0 5px;
-  transform: scale(1.1);
+  transform: scale(.9);
 }
 
 .login-btn:hover {
   cursor: pointer;
-  background-color: #2d2357;
+  background-color: #2d235780;
   color: white;
   text-shadow: #3560AC 0 0 5px;
-  transform: scale(1.1);
+  transform: scale(.9);
 }
 
 /* Profile and library styling */
+
+
 #profile-top {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
-  align-content: center;
   padding: 30px;
   gap: 40px;
 }
@@ -298,16 +305,25 @@ img {
   border-radius: 20px;
 }
 
+.profile-heading {
+  background: linear-gradient(#3560ac40, #12171440);
+  border-radius: 100px;
+  padding: 40px;
+}
+
+
 .profile-btn {
   padding: 15px;
+  margin-left: 50px;
   border: none;
-  background-color: #FFFFFFDE;
-  border-radius: 5px;
+  background-color: #FFFFFFB3;
+  border-radius: 40px;
   font-weight: 800;
   font-size: 1.2rem;
   transition: transform .5s;
   cursor: pointer;
-  margin-bottom: 20px;
+  width: 20%;
+
 }
 
 .profile-btn a {
@@ -316,10 +332,9 @@ img {
 
 .profile-btn:hover {
   cursor: pointer;
-  background-color: #2d2357;
+  background-color: #2d235780;
   color: white;
-  text-shadow: #FDC835 0 0 5px;
-  transform: scale(1.1);
+  transform: scale(.9);
 }
 
 .profile-btn:hover a {
@@ -330,19 +345,21 @@ img {
   padding-top: 30px;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   align-content: stretch;
+  gap: 30px;
 }
 
 .library-list a {
   font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .library-container:hover{
   cursor: pointer;
-  background-color: #2d2357;
+  background-color: #3560AC80;
   color: white;
   text-shadow: #FDC835 0 0 5px;
   transform: scale(1.1);
@@ -351,7 +368,7 @@ img {
 }
 
 .library-container {
-  height: 250px;
+  height: 110px;
   width: 250px;
   border-radius: 20px;
   display: flex;
@@ -360,8 +377,8 @@ img {
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: #2d2357;
-  background-image: url("https://www.transparenttextures.com/patterns/rocky-wall.png");
+  background-color: #12171480;
+  
 }
 
 .library-creation {
@@ -370,6 +387,7 @@ img {
   flex-wrap: nowrap;
   justify-content: space-evenly;
   align-items: center;
+  height: 600px;
 }
 
 .library-select {
@@ -383,16 +401,16 @@ img {
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
-  background: linear-gradient(#3560ac80, #12171480);  padding: 30px;
-  border-radius: 15px;
+  background: linear-gradient(#3560ac40, #12171440);
+  padding: 30px;
+  border-radius: 100px;
   gap: 20px;
 }
 
 .library-select button {
-  width: 100%;
-  padding: 15px;
+  padding: 10px;
   border: none;
-  background-color: #FFFFFFDE;
+  background-color: #FFFFFFB3;
   border-radius: 5px;
   font-weight: 800;
   font-size: 1.2rem;
@@ -403,34 +421,36 @@ img {
 }
 .library-select button:hover{
   cursor: pointer;
-  background-color: #2d2357;
+  background-color: #2d2357B3;
   color: white;
   text-shadow: #FDC835 0 0 5px;
-  transform: scale(1.1);
+  transform: scale(.9);
 }
 
-.library-creation > h1 {
-  width: 40%;
+.library-creation h1 {
+  width: 70%;
   text-align: center;
   text-shadow: #FDC835 0 0 5px;
   font-size: 2.5rem;
 }
 
-.library-select > form > label {
-  width: 100%;
+.library-creation label {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-evenly;
   align-items: center;
-  align-content: center;
   gap: 20px;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 500;
   text-shadow: #FDC835 0 0 5px;
 }
 
 .library-select select {
   font-size: 1.3rem;
+  width: 100%;
+  background-color: #2d235780;
+  color: white
 }
 
 .library-top {
@@ -446,28 +466,28 @@ img {
 }
 
 .library-top h1 {
-  width: 70%;
+  width: 50%;
 }
 
 .library-top button {
   padding: 15px;
   border: none;
-  background-color: #FFFFFFDE;
-  border-radius: 5px;
+  background-color: #FFFFFFB3;
+  border-radius: 40px;
   font-weight: 800;
   font-size: 1.2rem;
   transition: transform .5s;
   cursor: pointer;
-  width: 50%;
+  width: 30%;
   
 }
 
 .library-top button:hover{
   cursor: pointer;
-  background-color: #2d2357;
+  background-color: #2d2357B3;
   color: white;
   text-shadow: #FDC835 0 0 5px;
-  transform: scale(1.1);
+  transform: scale(.9);
 }
 
 .library-prompts {
@@ -475,14 +495,14 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  align-content: flex-end;
-  gap: 20px;
+  gap: 10px;
 }
 
+
 .library-prompts label {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   width: 50%;
   text-shadow: #FDC835 0 0 5px;
 }
@@ -597,3 +617,108 @@ pre > p {
   text-shadow: #FDC835 0 0 5px;
   transform: scale(1.1);
 }
+
+.slider-thumb::before {
+	position: absolute;
+	content: "";
+	left: 10%;
+	top: 10%;
+	width: 450px;
+	height: 850px;
+	background: #3560AC80;
+	border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+	will-change: border-radius, transform, opacity;
+	animation: sliderShape 5s linear infinite;
+	display: block;
+	z-index: -1;
+	-webkit-animation: sliderShape 5s linear infinite;
+}
+
+.slider-thumb2::before {
+	position: absolute;
+	content: "";
+	left: 60%;
+	top: 40%;
+	width: 550px;
+	height: 650px;
+	background: #44107a80;
+	border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+	will-change: border-radius, transform, opacity;
+	animation: sliderShape 5s linear infinite;
+	display: block;
+	z-index: -1;
+	-webkit-animation: sliderShape 5s linear infinite;
+}
+
+.slider-thumb3::before {
+	position: absolute;
+	content: "";
+	left: 50%;
+	top: 20%;
+	width: 750px;
+	height: 450px;
+	background: #FDC83580;
+	border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+	will-change: border-radius, transform, opacity;
+	animation: sliderShape 5s linear infinite;
+	display: block;
+	z-index: -1;
+	-webkit-animation: sliderShape 5s linear infinite;
+}
+@keyframes sliderShape{
+  0%,100%{
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+  }
+  34%{
+      border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    transform:  translate3d(0,5px,0) rotateZ(0.01deg);
+  }
+  50%{
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+  }
+  67%{
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
+    transform: translate3d(0,-3px,0) rotateZ(0.01deg);
+  }
+}
+
+.animate-charcter
+{
+
+  background-image: linear-gradient(
+    -225deg,
+    #2d2357 7% ,
+    #44107a 29%,
+    #3560AC 67%,
+    #FDC835 80%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 7s linear infinite;
+  display: inline-block;
+  font-size: 100px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.logout-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 600px;
+  font-size: 2.5rem;
+}
+
+
