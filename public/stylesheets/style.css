@@ -397,9 +397,18 @@ img {
 }
 
 pre {
+  display: flex;
+  justify-content: flex-start;
   background-color: #000000;
   margin: 0% !important;
-  border-radius: 0px 0px 15px 15px;
+  border-radius: 0px 0px 15px 15px;  
+}
+
+
+pre > p {
+  margin-left: 10px;
+  text-align: start !important;
+  margin-top: 0px;
 }
 
 .titlePrompt {
