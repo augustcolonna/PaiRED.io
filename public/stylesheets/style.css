@@ -175,7 +175,6 @@ select, input {
   width: 400px;
 }
 
-
 /* sign up page */
 .sign-up-container {
   display: flex;
@@ -339,7 +338,6 @@ img {
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
-
 }
 
 .library-prompts {
@@ -352,7 +350,6 @@ img {
   align-content: flex-end;
   gap:20px;
 }
-
 
 .library-top {
   display: flex;
@@ -378,8 +375,6 @@ img {
   width: 50%;
   text-align: center;
 }
-
-
 
 .singleSection {
   display: flex;
