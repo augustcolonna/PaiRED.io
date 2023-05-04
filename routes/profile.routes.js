@@ -13,7 +13,19 @@ router.get('/', isLoggedIn ,async (req, res, next) => {
     const currentUserId = req.session.user.id
     const currentUserLibraries = await LibraryModel.find({user: currentUserId})
     console.log(req.session.user, '------------------------------------------------')
-    res.render('profile', { currentUser: req.session.user, currentLibraries: currentUserLibraries })
+
+    const inputDateString = req.session.user.createdAt
+    const date = new Date(inputDateString);
+    const day = date.getUTCDate().toString().padStart(2, '0');
+    const month = (date.getUTCMonth() + 1).toString().padStart(2, '0');
+    const year = date.getUTCFullYear().toString();
+    const outputDateString = `${day}.${month}.${year}`;
+
+
+
+
+
+    res.render('profile', { currentUser: req.session.user, currentLibraries: currentUserLibraries, signUpDate: outputDateString })
 })
 
 router.get('/library-creation', isLoggedIn ,async (req, res, next) => {
@@ -44,8 +56,10 @@ router.post('/:id',isLoggedIn, async (req, res) => {
     const libraryLanguage = library.libname
     const newPrompt = req.body.prompt
     const finalPrompt = `Please return the syntax for ${newPrompt} in ${libraryLanguage}. Please only return the syntax and no extra explainations`
-    const apiResponse = await start(finalPrompt)
-    const data = {prompt: newPrompt, response: apiResponse, libraryid: libraryId}
+    let apiResponse = await start(finalPrompt)
+    apiResponse = apiResponse.substr(1)
+    const cleanedApiResponse = apiResponse.replace(/^\s*\n/gm, '')
+    const data = {prompt: newPrompt, response: cleanedApiResponse, libraryid: libraryId}
 
     await PromptModel.create(data)
 
