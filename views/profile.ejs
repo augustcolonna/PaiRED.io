@@ -5,9 +5,9 @@
         </div>
         <div class="profile-heading">
             <h1>Hello <%- currentUser.username %></h1>
-            <p>Currently learning these languages: <% currentLibraries.forEach(Library => { %>
-                    <%- Library.libname %>
-                    <% }) %> %></p>
+            <p>Currently learning these languages: <% currentLibraries.forEach((library, index) => { %>
+                <%= library.libname %><% if (index !== currentLibraries.length - 1) { %>, <% } %>
+            <% }) %></p>
             <p>Learning since: <%- signUpDate %></p>
         </div>
         <button class="profile-btn"><a href="/profile/library-creation">Create New Library</a></button>
