@@ -5,10 +5,10 @@
         </div>
         <div class="profile-heading">
             <h1>Hello <%- currentUser.username %></h1>
-            <p>Currently learning these languages: <% currentLibraries.forEach((library, index) => { %>
+            <p><span>Currently learning these languages: </span><% currentLibraries.forEach((library, index) => { %>
                 <%= library.libname %><% if (index !== currentLibraries.length - 1) { %>, <% } %>
             <% }) %></p>
-            <p>Learning since: <%- signUpDate %></p>
+            <p><span> Learning since:</span> <%- signUpDate %></p>
         </div>
         <button class="profile-btn"><a href="/profile/library-creation">Create New Library</a></button>
     </div>
