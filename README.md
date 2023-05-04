@@ -40,3 +40,6 @@ URls for the project repo and deploy
 ### Slides
 URls for the project presentation (slides)
 [Link Slides.com](https://docs.google.com/presentation/d/1yIxRwhhxt0s-VPb7nNDa9yI6Ii8A2UDHVFHYIXosNhk/edit?usp=sharing)
+
+### Adaptable
+Checkout the app [Link App](https://paired.adaptable.app)
