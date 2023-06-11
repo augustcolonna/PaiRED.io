@@ -21,10 +21,6 @@ router.get('/', isLoggedIn ,async (req, res, next) => {
     const year = date.getUTCFullYear().toString();
     const outputDateString = `${day}.${month}.${year}`;
 
-
-
-
-
     res.render('profile', { currentUser: req.session.user, currentLibraries: currentUserLibraries, signUpDate: outputDateString })
 })
 
