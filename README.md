@@ -1,5 +1,5 @@
 # PaiRED - Your Programmic Syntax Learning Assistent
-
+Checkout the app! [App](https://paired.adaptable.app)
 ## Description
 You can use PaiRED to make your own library of programming syntax. You can create, store and edit the syntax of any programming concept in any of the available programming languages.
 
