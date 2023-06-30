@@ -1,5 +1,5 @@
 # PaiRED - Your Programmic Syntax Learning Assistent
-
+Checkout the app! [PaiRED.io](https://paired.adaptable.app)
 ## Description
 You can use PaiRED to make your own library of programming syntax. You can create, store and edit the syntax of any programming concept in any of the available programming languages.
 
@@ -34,12 +34,12 @@ You can use PaiRED to make your own library of programming syntax. You can creat
 
 ### Git
 URls for the project repo and deploy
-[Link Repo](https://github.com/augustcolonna/PaiRED.io)
-[Link Deploy](https://paired.adaptable.app/)
+[Repo](https://github.com/augustcolonna/PaiRED.io)
+[Deploy](https://paired.adaptable.app/)
 
 ### Slides
 URls for the project presentation (slides)
-[Link Slides.com](https://docs.google.com/presentation/d/1yIxRwhhxt0s-VPb7nNDa9yI6Ii8A2UDHVFHYIXosNhk/edit?usp=sharing)
+[Slides.com](https://docs.google.com/presentation/d/1yIxRwhhxt0s-VPb7nNDa9yI6Ii8A2UDHVFHYIXosNhk/edit?usp=sharing)
 
 ### Adaptable
-Checkout the app [Link App](https://paired.adaptable.app)
+Checkout the app [App](https://paired.adaptable.app)
